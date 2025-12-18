@@ -1,15 +1,22 @@
 import { ChevronDown, Menu, Search, ShoppingBag } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
+import Sidebar from "./Sidebar";
 
 function Navbar() {
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
   return (
     <nav className="w-full bg-white border-b border-gray-200 fixed top-0 left-0 right-0">
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+
       <div className="w-full">
         <div className="w-full flex justify-between items-center h-16">
           {/* --------------------------Start Left: Menu------------------------------------------------ */}
           <div className="flex items-center">
-            <button className="p-2 hover:bg-gray-100 rounded-full">
+            <button
+              className="p-2 hover:bg-gray-100 rounded-full"
+              onClick={() => setIsSidebarOpen(true)}
+            >
               <Menu className="w-6 h-6 text-gray-600" />
             </button>
           </div>
