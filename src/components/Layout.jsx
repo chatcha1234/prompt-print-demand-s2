@@ -1,14 +1,12 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
-import Navbar from './Navbar';
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Navbar from "./Navbar";
 
 function Layout() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
-      <main className="w-full px-4 py-6">
-        <Outlet />
-      </main>
+      <main className="w-full px-4 py-6">{/* <Outlet /> */}</main>
     </div>
   );
 }
