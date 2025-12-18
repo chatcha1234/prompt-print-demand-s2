@@ -1,9 +1,20 @@
-import React from 'react'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './views/Home';
+import Login from './views/Login';
+import Register from './views/Register';
 
 const App = () => {
   return (
-    <div>App</div>
-  )
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+      </Route>
+    </Routes>
+  );
 }
 
 export default App
