@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { X } from "lucide-react";
+import { X,Trash2 } from "lucide-react";
 // import { Home, ShoppingBag ,Grid,HelpCircle,Info,User } from "lucide-react";
 
 const Sidebar = ({ isOpen, onClose }) => {
@@ -14,6 +14,7 @@ const Sidebar = ({ isOpen, onClose }) => {
             : "-translate-x-full flex flex-col flex-1 overflow-y-auto"
         }`}
       >
+        <Trash2 className="w-20 h-20"/>
         {/* ---------------------------Start Top sidebar: Menu-------------------------------------- */}
         <div className="flex items-center justify-between p-4">
           <h2 className="text-lg font-bold">Menu</h2>
